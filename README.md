@@ -1,6 +1,16 @@
 # Heimlich
 A collection of utilities for gulp.
 
+## Installation
+Install the package and add it to your development dependencies:
+```
+npm install --save-dev romeovs/heimlich
+```
+
+## Utilities
+- [`alert`](#heimlichalert)
+- [`dest`](#heimlichdest)
+
 ## `heimlich.alert`
 
 `alert` is a small wrapper around
