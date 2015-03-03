@@ -8,10 +8,10 @@ A collection of utilities for gulp.
 configures `gulp-plumber` to play a sound when an error occurs in the `gulp`
 pipeline, and it cleans up the error output to match the `gulp` log style.
 
-### usage
+### Usage
 ```
 var gulp     = require('gulp')
-  , heimlich = reqreui('heimlich');
+  , heimlich = require('heimlich');
 
 gulp.src('./src/file.ext')
     .pipe(heimlich.alert())
@@ -19,10 +19,7 @@ gulp.src('./src/file.ext')
     // etc.
 ```
 
-`alert` will look for a shell command named `beep` and call this
-to play the alert sound.
-
-### options
+### Options
 
 #### `options.silent`
 Set this to `true` to make `alert` silent.  It will not play a beep
@@ -33,4 +30,5 @@ Set this to `false` to shut up `alert`.  It will not print any error
 message anymore.  Defaults to `true`.
 
 #### `options.command`
-The command `alert` looks for to play the sound.  Defaults to `beep`.
+The name of the shell command `alert` looks for to play the error sound.
+Defaults to `"beep"`.
