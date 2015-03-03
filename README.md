@@ -32,4 +32,5 @@ sound anymore.  Defaults to `false`.
 Set this to `false` to shut up `alert`.  It will not print any error
 message anymore.  Defaults to `true`.
 
-
+#### `options.command`
+The command `alert` looks for to play the sound.  Defaults to `beep`.
