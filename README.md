@@ -1,5 +1,5 @@
 # Heimlich
-> Choking on on the same gulp stuff?
+> Choking on the same gulp stuff? Use heimlich!
 
 A collection of utilities for gulp.
 
