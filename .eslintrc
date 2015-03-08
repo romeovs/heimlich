@@ -8,9 +8,10 @@
 
   rules:
     quotes:
-      - 0                 # quotes are warnign
+      - 1                 # quotes are warnign
       - 'single'          # prefer single quotes (')
     no-multi-spaces : 0   # allow multiple spaces for aligning code
     no-multi-str    : 0   # disable multiline string error (jsx bug)
+    key-spacing     : 0   # allow multiple spaces after obect keys
 
 # vim: filetype=yaml
