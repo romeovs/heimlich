@@ -1,10 +1,7 @@
 "use strict";
 
-// es6 all the things!
-require('babel/register');
-
 module.exports = {
-  alert      : require('./lib/alert')
-, dest       :  require('./lib/dest')
-, browserify : require('./lib/browserify')
+  alert      : require('./build/alert')
+, dest       :  require('./build/dest')
+, browserify : require('./build/browserify')
 };
