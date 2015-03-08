@@ -26,10 +26,10 @@
   },
   "homepage": "https://github.com/romeovs/heimlich",
   "dependencies": {
+    "babel": "^4.7.3",
     "browserify": "^9.0.3",
     "gulp-plumber": "^0.6.6",
     "gulp-util": "^3.0.4",
-    "node-babel": "^0.1.1",
     "reactify": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",
     "watchify": "^2.4.0"

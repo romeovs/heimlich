@@ -1,11 +1,7 @@
 "use strict";
 
 // es6 all the things!
-require('node-babel')({
-  whitelist: [
-    "es6.templateLiterals"
-  ]
-});
+require('babel/register');
 
 module.exports = {
   alert      : require('./lib/alert')
