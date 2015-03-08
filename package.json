@@ -20,7 +20,10 @@
   },
   "homepage": "https://github.com/romeovs/heimlich",
   "dependencies": {
+    "browserify": "^9.0.3",
     "gulp-plumber": "^0.6.6",
-    "gulp-util": "^3.0.4"
+    "gulp-util": "^3.0.4",
+    "reactify": "^1.0.0",
+    "watchify": "^2.4.0"
   }
 }
