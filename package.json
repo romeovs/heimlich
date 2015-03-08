@@ -14,10 +14,11 @@
     "gulp"
   ],
   "author": "Romeo Van Snick <romeovs@gmail.com>",
-  "contributors": [{
-    "name": " Daiderd Jordan",
-    "email":  "daiderd@me.com"
-  }
+  "contributors": [
+    {
+      "name": " Daiderd Jordan",
+      "email": "daiderd@me.com"
+    }
   ],
   "license": "ISC",
   "bugs": {
@@ -30,5 +31,9 @@
     "gulp-util": "^3.0.4",
     "reactify": "^1.0.0",
     "watchify": "^2.4.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-eslint": "^0.6.0"
   }
 }

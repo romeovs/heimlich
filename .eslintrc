@@ -1,0 +1,16 @@
+---
+  settings:
+    ecmascript : 6        # enable ES6 features
+    jsx        : true     # enable jsx
+
+  env:
+    node    : true        # add node env
+
+  rules:
+    quotes:
+      - 0                 # quotes are warnign
+      - 'single'          # prefer single quotes (')
+    no-multi-spaces : 0   # allow multiple spaces for aligning code
+    no-multi-str    : 0   # disable multiline string error (jsx bug)
+
+# vim: filetype=yaml
