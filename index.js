@@ -1,6 +1,14 @@
 "use strict";
-module.exports =
-{ alert: require('./lib/alert')
-, dest:  require('./lib/dest')
-, browserify: require('./lib/browserify')
+
+// es6 all the things!
+require('node-babel')({
+  whitelist: [
+    "es6.templateLiterals"
+  ]
+});
+
+module.exports = {
+  alert      : require('./lib/alert')
+, dest       :  require('./lib/dest')
+, browserify : require('./lib/browserify')
 };
