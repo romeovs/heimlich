@@ -1,3 +1,4 @@
+'use strict';
 var gulp = require('gulp')
   , path = require('path')
   ;
@@ -27,7 +28,7 @@ gulp.task('lint', function() {
   return gulp
           .src(project.paths.js)
           .pipe(eslint(project.options.eslint))
-          .pipe(eslint.format())
+          .pipe(eslint.format());
 });
 // >>
 
