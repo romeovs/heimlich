@@ -13,7 +13,12 @@
   "keywords": [
     "gulp"
   ],
-  "author": "Romeo Van Snick",
+  "author": "Romeo Van Snick <romeovs@gmail.com>",
+  "contributors": [{
+    "name": " Daiderd Jordan",
+    "email":  "daiderd@me.com"
+  }
+  ],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/romeovs/heimlich/issues"
