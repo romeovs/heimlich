@@ -6,4 +6,5 @@ module.exports = {
   alert      : require('./build/alert')
 , dest       : require('./build/dest')
 , browserify : require('./build/browserify')
+, reactify   : require('./build/browserify/react')
 };
