@@ -36,6 +36,7 @@
     "watchify": "^2.4.0"
   },
   "devDependencies": {
+    "babel-eslint": "^1.0.14",
     "gulp": "^3.8.11",
     "gulp-eslint": "^0.6.0"
   }

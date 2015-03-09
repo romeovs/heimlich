@@ -1,4 +1,5 @@
 ---
+  parser: babel-eslint
   settings:
     ecmascript : 6        # enable ES6 features
     jsx        : true     # enable jsx
