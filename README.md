@@ -14,3 +14,6 @@ npm install --save-dev romeovs/heimlich
 - [`heimlich.dest`](https://github.com/romeovs/heimlich/wiki/heimlich.alert)
 - [`heimlich.browserify`](https://github.com/romeovs/heimlich/wiki/heimlich.browserify)
 - [`heimlich.reactify`](https://github.com/romeovs/heimlich/wiki/heimlich.reactify)
+- [`heimlich.flag`](https://github.com/romeovs/heimlich/wiki/heimlich.flag)
+- [`heimlich.production`](https://github.com/romeovs/heimlich/wiki/heimlich.flag)
+- [`heimlich.lint`](https://github.com/romeovs/heimlich/wiki/heimlich.flag)
