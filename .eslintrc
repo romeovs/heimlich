@@ -9,10 +9,12 @@
 
   rules:
     quotes:
-      - 1                 # quotes are warnign
-      - 'single'          # prefer single quotes (')
-    no-multi-spaces : 0   # allow multiple spaces for aligning code
-    no-multi-str    : 0   # disable multiline string error (jsx bug)
-    key-spacing     : 0   # allow multiple spaces after obect keys
+      - 1                      # quotes are warnign
+      - 'single'               # prefer single quotes (')
+    no-multi-spaces      : 0   # allow multiple spaces for aligning code
+    no-multi-str         : 0   # disable multiline string error (jsx bug)
+    key-spacing          : 0   # allow multiple spaces after obect keys
+    no-alert             : 0   # we have our own alert
+    no-underscore-dangle : 0   # allow dangling underscores
 
 # vim: filetype=yaml
