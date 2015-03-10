@@ -5,8 +5,14 @@ A collection of utilities for gulp.
 
 ## Installation
 Install the package and add it to your development dependencies:
-```
+```bash
 npm install --save-dev romeovs/heimlich
+```
+
+## Development
+Using a local clone requires rebuilding with babel, unless you use the development version:
+```bash
+ln -s ~/path/to/heimlich/devel node_modules/heimlich
 ```
 
 ## Utilities
@@ -15,5 +21,5 @@ npm install --save-dev romeovs/heimlich
 - [`heimlich.browserify`](https://github.com/romeovs/heimlich/wiki/heimlich.browserify)
 - [`heimlich.reactify`](https://github.com/romeovs/heimlich/wiki/heimlich.reactify)
 - [`heimlich.flag`](https://github.com/romeovs/heimlich/wiki/heimlich.flag)
-- [`heimlich.production`](https://github.com/romeovs/heimlich/wiki/heimlich.flag)
-- [`heimlich.lint`](https://github.com/romeovs/heimlich/wiki/heimlich.flag)
+    - `heimlich.production`
+    - `heimlich.lint`
