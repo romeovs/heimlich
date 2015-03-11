@@ -1,4 +1,10 @@
 
+# source files
+src:
+  stylus:
+    - ./src/css/main.styl
+
+# destination folders
 dest:
   js:  ./public/js
   css: ./public/css
