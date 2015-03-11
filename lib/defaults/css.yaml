@@ -1,0 +1,29 @@
+
+stylus:
+  linenos : false     # disable linenos
+  nib     : true      # include nib
+
+myth:
+  # which browsers to prefix for
+  # see: https://github.com/ai/browserslist#queries
+  browsers:
+    - > 1%
+    - last 4 versions
+    - Firefox ESR
+
+csso:
+  restructure: true   # use structure minimisation
+
+minify-css:
+  advanced            : true    # advanced optimisations
+  aggressiveMerging   : true    # allow aggresive merging
+  compatibility       : ie8     # be compatible to ie8
+  debug               : false   # do not include debugger info
+  keepBreaks          : false   # do not keep linebreaks
+  keepSpecialComments : 0       # remove all comments
+  rebase              : false   # do not rebase urls
+  # relativeTo          : ''      # resolve relative imports from this path
+  # root                : ''      # path to resolve absolute urls from
+  roundingPrecision   : 2       # round to 2 decimals
+  shorthandCompacting : true    # compact shorthands
+
