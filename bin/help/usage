@@ -1,0 +1,8 @@
+
+  Usage: heimlich <command>
+
+  Commands:
+
+    - config      write default config files to ./config
+    - init        initialize new heimlich project
+    - help <cmd>  show the help info for a certain command

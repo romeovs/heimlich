@@ -1,0 +1,29 @@
+
+  Usage: heimlich config <plugins ...> [options]
+
+  Writes the default config of selected plugins
+  to the ./config directory.
+
+  plugins is an optionally empty list of plugin
+  names for which to write the config files. If
+  the list is empty, the config files for all
+  plugins are written.
+
+  The list of available plugins is:
+
+    - heimlich
+    - css
+    - modernizr
+    - uglify
+
+  Options:
+
+    --format fmt    the output format (yaml, js or json)
+                    defaults to yaml.
+
+    --overwrite     allow overwriting of existing files
+                    defaults to not overwriting
+
+  Example: write the css.yaml config file to ./config:
+
+    heimlich config css
