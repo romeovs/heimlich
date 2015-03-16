@@ -3,13 +3,13 @@ stylus:
   linenos : false     # disable linenos
   nib     : true      # include nib
 
-myth:
+myth: {}
   # which browsers to prefix for
   # see: https://github.com/ai/browserslist#queries
-  browsers:
-    - > 1%
-    - last 4 versions
-    - Firefox ESR
+  # browsers:
+  #   - > 1%
+  #   - last 4 versions
+  #   - Firefox ESR
 
 csso:
   restructure: true   # use structure minimisation
@@ -26,3 +26,36 @@ minify-css:
   # root                : ''      # path to resolve absolute urls from
   roundingPrecision   : 2       # round to 2 decimals
   shorthandCompacting : true    # compact shorthands
+
+csslint:
+  adjoining-classes           : false   # disallow adjoining classes (eg .foo.bar)
+  box-model                   : false   # warn when box-model gets confusing
+  box-sizing                  : false   # disallow usage of box-sizing
+  compatible-vendor-prefixes  : true    # warn when specific prefix is missing
+  empty-rules                 : true    # disallow empty rules
+  display-property-grouping   : true    # warn when rules have no effect (based on display:)
+  duplicate-background-images : true    # warn when same image url is used more than once
+  duplicate-properties        : true    # warn when duplicate rules are found (also shorthands)
+  fallback-colors             : true    # force use of fallback colors
+  floats                      : true    # warn when floats get used to much
+  font-faces                  : true    # warn when too much fonts are used
+  font-sizes                  : true    # warn when fontsizes can be abstracted better
+  gradients                   : true    # warn when only one vendor gradient is used without the others
+  ids                         : true    # reduce ids usage
+  import                      : true    # disallow use of @import
+  important                   : true    # disallow usage of !important
+  known-properties            : true    # only allow known properties
+  outline-none                : true    # make sure active input is visible
+  overqualified-elements      : true    # warn when selectors are overqualified (eg. div.foo)
+  qualified-headings          : false   # do not allow qualification of headers
+  regex-selectors             : true    # warn when selectors are malperformant
+  shorthand                   : true    # force reducing to shorthands
+  star-property-hack          : true    # disallow star property hack
+  text-indent                 : true    # make correct use of text-indent
+  underscore-property-hack    : true    # disallow underscore hack
+  unique-headings             : true    # force deduplication of heading selectors
+  universal-selector          : true    # disallow universal selector
+  unqualified-attributes      : true    # disallow slow attribute rules like [type=text] as main selection
+  vendor-prefix               : true    # force use of standard propery alognside vendor prefixed one
+  zero-units                  : true    # disallow units for 0 values
+
