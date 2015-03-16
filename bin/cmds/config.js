@@ -11,9 +11,9 @@ module.exports = function() {
   var argv =
     yargs
       .boolean('overwite')
-      .alias('h', 'help')
       .nargs('format', 1)
       .argv
+    ;
 
 
   var plugins = argv._.slice(1);
