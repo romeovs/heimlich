@@ -1,11 +1,7 @@
-#!/usr/bin/env node
-
 'use strict';
 var yargs = require('yargs')
   , fs    = require('fs')
   , path  = require('path')
-  ;
-
   ;
 
 var argv = yargs.argv
