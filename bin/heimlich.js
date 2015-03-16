@@ -15,7 +15,7 @@ try {
   if ( cmd ) {
     switch( cmd ) {
       case 'init':
-        console.log('not implemented');
+        require('./cmds/init')(argv);
         break;
       case 'config':
         require('./cmds/config')(argv);
