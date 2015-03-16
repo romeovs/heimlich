@@ -58,4 +58,3 @@ csslint:
   unqualified-attributes      : true    # disallow slow attribute rules like [type=text] as main selection
   vendor-prefix               : true    # force use of standard propery alognside vendor prefixed one
   zero-units                  : true    # disallow units for 0 values
-
