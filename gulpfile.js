@@ -11,6 +11,8 @@ var project = {
       'gulpfile.js'
     , 'lib/*.js'
     , 'lib/**/*.js'
+    , 'bin/*.js'
+    , 'bin/**/*.js'
     ]
   },
   options: { }
@@ -29,6 +31,33 @@ gulp.task('lint', function() {
           .src(project.paths.js)
           .pipe(eslint(project.options.eslint))
           .pipe(eslint.format());
+});
+// >>
+
+// BUILD <<
+var babel = require('gulp-babel')
+  ;
+
+gulp.task('build', function() {
+  var strm =
+    gulp
+      .src(project.paths.js)
+      .pipe(babel())
+      .pipe(gulp.dest('build'));
+
+  return strm;
+});
+
+// >>
+
+// WATCH <<
+var watch = require('gulp-watch')
+  ;
+
+gulp.task('watch', ['default'], function() {
+  watch(project.paths.js, function() {
+    gulp.start('build');
+  });
 });
 // >>
 

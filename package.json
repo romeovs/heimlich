@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "./node_modules/babel/bin/babel/index.js lib bin -d build/ -D"
   },
-  "bin" : "bin/cli.js",
+  "bin": "bin/cli.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/romeovs/heimlich.git"
@@ -60,6 +60,8 @@
   "devDependencies": {
     "babel-eslint": "^1.0.14",
     "gulp": "^3.8.11",
-    "gulp-eslint": "^0.6.0"
+    "gulp-babel": "^4.0.0",
+    "gulp-eslint": "^0.6.0",
+    "gulp-watch": "^4.2.0"
   }
 }
