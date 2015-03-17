@@ -1,0 +1,9 @@
+
+  Usage: heimlich init <name>
+
+  Creates a new boilerplate project that contains
+  everything you might need!
+
+  Options:
+
+    --react     enable react boilerplate
