@@ -6,8 +6,9 @@ var fs    = require('fs')
   , gutil = require('gulp-util')
   ;
 
+var defaultsdir = path.join(__dirname, '../../lib/defaults');
 
-module.exports = function() {
+module.exports = function(argv, gulpdir) {
   var argv =
     yargs
       .boolean('overwite')
@@ -15,25 +16,26 @@ module.exports = function() {
       .argv
     ;
 
+  var confdir = path.join(gulpdir, 'config');
 
   var plugins = argv._.slice(1);
   var format  = argv.format || 'yaml';
 
-  if ( !fs.existsSync('./config')) {
-    fs.mkdirSync('./config');
+  if ( !fs.existsSync(confdir)) {
+    fs.mkdirSync(confdir);
   }
 
   if ( plugins.length === 0 ) {
     // read all config files
     plugins =
-      fs.readdirSync(path.join(__dirname, '../../lib/defaults'))
+      fs.readdirSync(defaultsdir)
         .filter(function(file) {
           return path.extname(file) === '.yaml';
         });
   }
 
   plugins.forEach(function(plugin) {
-    var loc = './config/' + plugin + '.' + format;
+    var loc = path.join(confdir, plugin + '.' + format);
     fs.exists(loc, function(exists) {
       if ( exists && !argv.overwrite ) {
         console.log(gutil.colors.red('! ') + 'file exists:', gutil.colors.magenta(loc) + ',',
@@ -41,7 +43,7 @@ module.exports = function() {
         return;
       }
 
-      var pth = path.join(__dirname, '../../lib/defaults', plugin + '.yaml')
+      var pth = path.join(defaultsdir, plugin + '.yaml')
       fs.readFile(pth, function(err, content) {
         var conf;
         switch ( format ) {
