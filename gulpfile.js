@@ -14,8 +14,15 @@ var project = {
     , 'bin/*.js'
     , 'bin/**/*.js'
     ]
-  },
-  options: { }
+  , copy: [
+      'bin/**/*'
+    , '!bin/**/*.js'
+    , 'lib/**/*'
+    , '!lib/**/*.js'
+    ]
+  }
+, dest: 'build'
+, options: { }
 };
 // >>
 
@@ -43,11 +50,20 @@ gulp.task('build', function() {
     gulp
       .src(project.paths.js)
       .pipe(babel())
-      .pipe(gulp.dest('build'));
+      .pipe(gulp.dest(project.dest));
 
   return strm;
 });
 
+// >>
+
+// COPY <<
+gulp.task('copy', function() {
+  var strm =
+    gulp
+      .src(project.paths.copy)
+      .pipe(gulp.dest(project.dest));
+});
 // >>
 
 // WATCH <<
@@ -58,11 +74,15 @@ gulp.task('watch', ['default'], function() {
   watch(project.paths.js, function() {
     gulp.start('build');
   });
+
+  watch(project.paths.copy, function() {
+    gulp.start('copy');
+  });
 });
 // >>
 
 // DEFAULT <<
-gulp.task('default', ['lint'], function() {
+gulp.task('default', ['lint', 'build', 'copy'], function() {
 
 });
 // >>
