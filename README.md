@@ -23,3 +23,8 @@ ln -s ~/path/to/heimlich/devel node_modules/heimlich
 - [`heimlich.flag`](https://github.com/romeovs/heimlich/wiki/heimlich.flag)
     - `heimlich.production`
     - `heimlich.lint`
+
+
+## Caveats
+
+- `node v0.12.0` requires [harmonize](https://github.com/dcodeIO/node-harmonize) `> 1.4.1`, currently only available on github.
