@@ -3,14 +3,14 @@
 src:
   js:
     - ./src/js/main.jsx
-  stylus:
+  css:
     - ./src/css/main.styl
 
 # files to watch for changes in
 watch:
   js:
     - ./src/js/**/*.+(js|jsx)
-  stylus:
+  css:
     - ./src/css/**/*.+(styl|css)
 
 # destination folders
