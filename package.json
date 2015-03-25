@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "./node_modules/babel/bin/babel/index.js lib bin -d build/ -D"
+    "postinstall": "babel lib bin -d build/ -D"
   },
   "bin": "bin/cli.js",
   "repository": {
