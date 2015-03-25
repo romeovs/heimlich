@@ -63,6 +63,7 @@ gulp.task('copy', function() {
     gulp
       .src(project.paths.copy)
       .pipe(gulp.dest(project.dest));
+  return strm;
 });
 // >>
 

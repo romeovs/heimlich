@@ -3,6 +3,7 @@ var yargs  = require('yargs')
   , fs     = require('fs')
   , path   = require('path')
   , findup = require('findup')
+  , handle = require('./handle')
   ;
 
 var argv = yargs.argv
@@ -23,14 +24,14 @@ try {
         require('./cmds/help')(argv);
         break;
       default:
-        throw "unknown command '" + cmd + "'";
+        throw 'unknown command \'' + cmd + '\'';
     }
   } else {
     fs.readFile(path.join(__dirname, 'help/usage'), function(err, content) {
+      if ( err ) { throw err; }
       console.log(content.toString());
     });
   }
 } catch ( e ) {
-  console.log(e);
-  process.exit(1);
+  handle(e);
 }

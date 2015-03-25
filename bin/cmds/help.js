@@ -1,6 +1,7 @@
 'use strict';
-var fs    = require('fs')
-  , path  = require('path')
+var fs     = require('fs')
+  , path   = require('path')
+  , handle = require('../handle')
   ;
 
 module.exports = function(argv) {
@@ -10,6 +11,7 @@ module.exports = function(argv) {
   }
 
   fs.readFile(path.join(__dirname, '../help/' + cmd), function(err, content) {
+    handle(err);
     console.log(content.toString());
   });
 };

@@ -8,7 +8,7 @@ var fs    = require('fs')
 
 var defaultsdir = path.join(__dirname, '../../lib/defaults');
 
-module.exports = function(argv, gulpdir) {
+module.exports = function(_, gulpdir) {
   var argv =
     yargs
       .boolean('overwite')
@@ -46,8 +46,9 @@ module.exports = function(argv, gulpdir) {
         return;
       }
 
-      var pth = path.join(defaultsdir, plugin + '.yaml')
+      var pth = path.join(defaultsdir, plugin + '.yaml');
       fs.readFile(pth, function(err, content) {
+        if ( err ) { throw err; }
         var conf;
         switch ( format ) {
           case 'yaml':
@@ -56,20 +57,16 @@ module.exports = function(argv, gulpdir) {
           case 'js':
             var util = require('util');
             var data = yaml.parse(content.toString());
-            conf = 'module.exports =\n' + util.inspect(data, {depth: null}) + ";";
+            conf = 'module.exports =\n' + util.inspect(data, {depth: null}) + ';';
             break;
           case 'json':
             conf = JSON.stringify(yaml.parse(content.toString()), null, 2);
             break;
           default:
-            console.log("No such format '" + format + "'.");
-            process.exit(1);
+            throw 'No such format \'' + format + '\'.';
         }
-        fs.writeFile(loc, conf, function(err) {
-          if (err) {
-            console.log(err);
-            process.exit(1);
-          }
+        fs.writeFile(loc, conf, function(error) {
+          if (error) { throw error; }
           console.log(gutil.colors.green('✓ ') + plugin + ' config written to ' + gutil.colors.magenta(loc));
         });
       });
