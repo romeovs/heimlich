@@ -1,8 +1,17 @@
 
 # source files
 src:
+  js:
+    - ./src/js/main.jsx
   stylus:
     - ./src/css/main.styl
+
+# files to watch for changes in
+watch:
+  js:
+    - ./src/js/**/*.+(js|jsx)
+  stylus:
+    - ./src/css/**/*.+(styl|css)
 
 # destination folders
 dest:
