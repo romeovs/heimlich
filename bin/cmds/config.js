@@ -31,6 +31,9 @@ module.exports = function(argv, gulpdir) {
       fs.readdirSync(defaultsdir)
         .filter(function(file) {
           return path.extname(file) === '.yaml';
+        })
+        .map(function(file) {
+          return path.basename(file, '.yaml');
         });
   }
 
