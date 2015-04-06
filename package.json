@@ -31,6 +31,7 @@
     "babel": "^4.7.3",
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
+    "config": "git://github.com/romeovs/config",
     "findup": "^0.1.5",
     "gulp-buffer": "0.0.2",
     "gulp-concat": "^2.5.2",
