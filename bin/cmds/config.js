@@ -6,7 +6,7 @@ var fs    = require('fs')
   , gutil = require('gulp-util')
   ;
 
-var defaultsdir = path.join(__dirname, '../../lib/defaults');
+var defaultsdir = path.join(__dirname, '../../lib/defaults/config');
 
 module.exports = function(_, gulpdir) {
   var argv =
