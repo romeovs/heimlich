@@ -29,11 +29,12 @@
   },
   "homepage": "https://github.com/romeovs/heimlich",
   "dependencies": {
-    "babel": "^4.7.3",
+    "babel": "^5.0.12",
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
     "config": "git://github.com/romeovs/config",
     "findup": "^0.1.5",
+    "gulp-browserify": "git://github.com/romeovs/gulp-browserify",
     "gulp-buffer": "0.0.2",
     "gulp-concat": "^2.5.2",
     "gulp-csscss": "^0.1.1",
