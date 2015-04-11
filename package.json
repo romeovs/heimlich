@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "postinstall": "npm run compile",
-    "compile": "babel lib bin -d build/ -D"
+    "compile": "babel --optional runtime lib bin -d build/ -D"
   },
   "bin": "bin/cli.js",
   "repository": {
