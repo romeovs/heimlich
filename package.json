@@ -30,6 +30,7 @@
   "homepage": "https://github.com/romeovs/heimlich",
   "dependencies": {
     "babel": "^4.7.3",
+    "babel-runtime": "^5.0.12",
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
     "config": "git://github.com/romeovs/config",
