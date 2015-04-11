@@ -49,7 +49,9 @@ gulp.task('build', function() {
   var strm =
     gulp
       .src(project.paths.js)
-      .pipe(babel())
+      .pipe(babel({
+        optional: ['runtime']
+      }))
       .pipe(gulp.dest(project.dest));
 
   return strm;
