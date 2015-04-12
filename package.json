@@ -42,6 +42,7 @@
     "gulp-csslint": "^0.1.5",
     "gulp-csso": "^1.0.0",
     "gulp-data": "^1.2.0",
+    "gulp-flowtype": "^0.4.6",
     "gulp-if": "^1.2.5",
     "gulp-minify-css": "^1.0.0",
     "gulp-modulizr": "git://github.com/romeovs/gulp-modulizr",
