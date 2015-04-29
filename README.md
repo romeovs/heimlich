@@ -41,13 +41,3 @@ to have the local development version of `heimlich`.
 
 This is the preferable method because this is as close as possible
 to how the code will be used in development.
-
-Another method uses polyfills to create the same effect but is less preferable
-because it deviates more from how the code will be used in production.  To use
-the devel build in another project use:
-```sh
-ln -s ~/path/to/heimlich/devel node_modules/heimlich
-```
-
-
-
